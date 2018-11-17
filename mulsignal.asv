@@ -259,39 +259,34 @@ psnr3 = 10*log10((255*255)/mse3);
 psnr4 = 10*log10((255*255)/mse4);
 psnr5 = 10*log10((255*255)/mse5);
 
-f1 = uint8(f1); %unsigned char type
+f = uint8(f); %unsigned char type
 f2 = uint8(f2); %unsigned char type
 f3 = uint8(f3); %unsigned char type
 f4 = uint8(f4); %unsigned char type
 f5 = uint8(f5); %unsigned char type
-save('IDCT_result_a.mat','f1')
-save('IDCT_result_b.mat','f2')
-save('IDCT_result_c.mat','f3')
-save('IDCT_result_d.mat','f4')
-save('IDCT_result_e.mat','f5')
 
 %화면 출력, reconstructed image 저장
-% figure(4)
-% subplot(2,3,1)
-% imshow(f1)
-% title('1')
-% imwrite(f,'a.jpeg')
-% subplot(2,3,2)
-% imshow(f2)
-% title('2')
-% imwrite(f2,'b.jpeg')
-% subplot(2,3,3)
-% imshow(f3)
-% title('3')
-% imwrite(f3,'c.jpeg')
-% subplot(2,3,4)
-% imshow(f4)
-% title('4')
-% imwrite(f4,'d.jpeg')
-% subplot(2,3,5)
-% imshow(f5)
-% title('5')
-% imwrite(f5,'e.jpeg')
+figure(4)
+subplot(2,3,1)
+imshow(f)
+title('1')
+imwrite(f,'a.jpeg')
+subplot(2,3,2)
+imshow(f2)
+title('2')
+imwrite(f2,'b.jpeg')
+subplot(2,3,3)
+imshow(f3)
+title('3')
+imwrite(f3,'c.jpeg')
+subplot(2,3,4)
+imshow(f4)
+title('4')
+imwrite(f4,'d.jpeg')
+subplot(2,3,5)
+imshow(f5)
+title('5')
+imwrite(f5,'e.jpeg')
 % imwrite(f,'IDCT.jpeg')
 
 
